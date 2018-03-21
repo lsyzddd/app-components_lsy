@@ -1,0 +1,42 @@
+.scroller-container {
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 0;
+}
+.scroller-content {
+	position: relative;
+	z-index: 1;
+}
+.scroller-pulldown-wrapper {
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	right: 0;
+	transition: all;
+}
+.scroller-after-pull-down {
+	font-size: 14px;
+	line-height: 40px;
+	width: 100%;
+}
+.scroller-pullup-wrapper {
+	align-items: center;
+	display: flex;
+	display: webkit-flex;
+	justify-content: center;
+	width: 100%;
+}
+.scroller-before-pull-up {
+	color: #616161;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: center;
+	width: 100%;
+}
