@@ -21,8 +21,9 @@ better-scroll 也支持直接用 script 加载的方式，加载后会在 window
 docs   https://ustbhuangyi.github.io/better-scroll/#/
 
 
-本人修改的组件使用方式如下
+本人修改的组件使用方式如下：
 
+```
 <template>
 	<app-scroller
 	  ref="scroller"
@@ -37,7 +38,7 @@ docs   https://ustbhuangyi.github.io/better-scroll/#/
 </template>
 
 <script>
-/*此处引入该组件*/
+/*此处引入该组件 import ... from ...*/
 export default {
 	methods: {
 		pullingDown: function() {
@@ -65,8 +66,8 @@ export default {
 		}
 	},
 	components: {
-		/*组件名称*/
+		/*组件名称 ...*/
 	}
 }	
 </script>
-
+```
