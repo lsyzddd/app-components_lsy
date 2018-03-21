@@ -21,7 +21,7 @@ better-scroll 也支持直接用 script 加载的方式，加载后会在 window
 docs   https://ustbhuangyi.github.io/better-scroll/#/
 
 
-本人修改的组件使用方式如下
+本人修改的组件使用方式如下：
 
 <template>
 	<app-scroller
