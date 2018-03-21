@@ -16,16 +16,21 @@ export default {
 	},
 	methods: {
 		getCurrentPosition: function() {
-			plus.geolocation.getCurrentPosition((position) => {
-				let address = position.address;
-				let addressNames = [address.province,address.city,address.district];
-				this.address = addressNames;
-			},(error) => {
-				
-			},{
-				timeout: 10000,
-				provider: 'amap'
-			})	
+			if(window.plus) {
+				plus.geolocation.getCurrentPosition((position) => {
+					let address = position.address;
+					let addressNames = [address.province,address.city,address.district];
+					this.address = addressNames;
+				},(error) => {
+					
+				},{
+					timeout: 10000,
+					provider: 'amap'
+				})
+			}
+			else {
+				console.log('请使用hbuilder打包后获取当前位置');
+			}
 		},
 		getAddressIds: function(ids) {
 			this.$emit('on-get-localtionIds',ids);
