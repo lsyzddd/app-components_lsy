@@ -38,7 +38,7 @@ docs   https://ustbhuangyi.github.io/better-scroll/#/
 </template>
 
 <script>
-/*此处引入该组件*/
+/*此处引入该组件 import ... from ...*/
 export default {
 	methods: {
 		pullingDown: function() {
@@ -66,7 +66,7 @@ export default {
 		}
 	},
 	components: {
-		/*组件名称*/
+		/*组件名称 ...*/
 	}
 }	
 </script>
