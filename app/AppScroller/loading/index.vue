@@ -32,20 +32,29 @@ export default {
 
 <style scoped>
 .container {
-	align-items: center;
 	color: #212121;
-	display: flex;
-	font-size: 14px;
+	display: -webkit-box;
+	display: -moz-box;
 	height: 40px;
-	justify-content: center;
+	overflow: hidden;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-webkit-box-pack:center;
+	-moz-box-pack: center;
 	width: 100%;
 }
 .loading-tip {
-	margin-right: 10px;
+	font-size: 14px;
+	float: left;
+	line-height: 40px;
+	margin: 0 10px 0 0;
+	position: relative;
 }
 .loading-image {
-	height: 20px;
-	width: 20px;
 	display: inline-block;
+	float: left;
+	height: 20px;
+	position: relative;
+	width: 20px;
 }
 </style>

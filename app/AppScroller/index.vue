@@ -11,7 +11,7 @@
 		</div>
 		<div v-if="pullDownRefresh" class="scroller-pulldown-wrapper" :style="pullDownStyle">
 			<bubble v-if="beforePullDown" :y="bubbleY"></bubble>
-			<div v-else>
+			<div v-else class="pulldown-refresh-container">
 				<loading v-if="isPullingDown" tip="正在刷新"></loading>
 				<p v-else class="scroller-after-pull-down">{{ refreshText }}</p>
 			</div>

@@ -12,11 +12,13 @@
 	z-index: 1;
 }
 .scroller-pulldown-wrapper {
-	align-items: center;
-	display: flex;
-	display: -webkit-flex;
-	justify-content: center;
+	display: -webkit-box;
+	display: -moz-box;
 	left: 0;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-webkit-box-pack:center;
+	-moz-box-pack: center;
 	position: absolute;
 	right: 0;
 	transition: all;
@@ -24,13 +26,19 @@
 .scroller-after-pull-down {
 	font-size: 14px;
 	line-height: 40px;
+	text-align: center;
 	width: 100%;
 }
 .scroller-pullup-wrapper {
-	align-items: center;
-	display: flex;
-	display: webkit-flex;
-	justify-content: center;
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-align: center;
+	-webkit-box-pack:center;
+	-moz-box-align: center;
+	-moz-box-pack: center;
+	width: 100%;
+}
+.pulldown-refresh-container {
 	width: 100%;
 }
 .scroller-before-pull-up {
