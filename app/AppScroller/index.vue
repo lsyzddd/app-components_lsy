@@ -1,5 +1,5 @@
 <template>
-	<div ref="wrapper" class="scroller-container">
+	<div ref="wrapper" class="scroller-container" :style="{top: top,bottom: bottom}">
 		<div class="scroller-content">
 			<div ref="scrollerList">
 				<slot></slot>
@@ -32,6 +32,18 @@ export default {
 				return '#F5F5F5';
 			}
 		},
+		top: {
+			type: null,
+			default() {
+				return 0;
+			}
+		},
+		bottom: {
+			type: null,
+			default() {
+				return 0;
+			}
+		}
 		probeType: {
 			type: Number,
 			default() {
@@ -139,7 +151,6 @@ export default {
 			else if(this.pullUpLoad && this.isPullingUp) {
 				this.isPullingUp = false;
 				this.scroller.finishPullUp();
-				this.refresh();
 			}
 			else {
 				this.refresh();
@@ -186,9 +197,7 @@ export default {
 			this.scroller.on('pullingDown', () => {
 				this.beforePullDown = false;
 				this.isPullingDown = true;
-				setTimeout(() => {
-					this.$emit('on-pulling-down');
-				}, 2000)
+				this.$emit('on-pulling-down');
 			})
 			this.scroller.on('scroll', (pos) => {
 				if(this.beforePullDown) {
@@ -223,10 +232,10 @@ export default {
 		},
 		_initPullUpLoad: function() {
 			this.scroller.on('pullingUp', () => {
-				this.isPullingUp = true;
-				setTimeout(() => {
+				if(this.isAllowPullup) {
+					this.isPullingUp = true;
 					this.$emit('on-pulling-up');
-				}, 2000)
+				}
 			})
 		}
 	},
